@@ -13,7 +13,6 @@
 </head>
 <body>
 
-    <!-- Navigation -->
     <nav class="nav container">
         <div class="nav-content">
             <a href="index.html" class="logo">NEIL</a>
@@ -27,7 +26,6 @@
         </div>
     </nav>
 
-    <!-- Mobile Menu Overlay -->
     <div class="mobile-menu-overlay" id="mobileMenuOverlay">
         <div class="close-menu" id="closeMenu">CLOSE</div>
         <ul class="mobile-nav-links">
@@ -39,206 +37,95 @@
         </ul>
     </div>
 
-    <main>
-        <!-- Case Study Hero -->
-        <section class="cs-hero container">
+    <main class="cs-article-page">
+
+        <div class="cs-article-container">
+
+            <!-- Back -->
             <div class="cs-back-link">
                 <a href="index.html#work">&larr; Back to Work</a>
             </div>
+
+            <!-- Tags -->
             <div class="cs-meta">
                 <span class="tool-tag">GTM tooling (Smartlead, Clay)</span>
                 <span class="cs-type">Nearshoring Use Case — US Tech Market</span>
             </div>
-            <h1 class="cs-title">Hiring Signal-Based<br>Account Discovery</h1>
-            <p class="cs-subtitle">Most nearshoring agencies spray and pray toward any US tech company. I engineered a system that identifies active hiring signals and distributed team patterns to find the 1% of companies ready to hire <em>now</em>.</p>
 
-            <div class="cs-stats-bar">
-                <div class="cs-stat">
-                    <span class="cs-stat-num">1%</span>
-                    <span class="cs-stat-label">Target: Companies Ready to Buy Now</span>
-                </div>
-                <div class="cs-stat">
-                    <span class="cs-stat-num">5+ roles</span>
-                    <span class="cs-stat-label">Engineering Hiring Trigger</span>
-                </div>
-                <div class="cs-stat">
-                    <span class="cs-stat-num">100%</span>
-                    <span class="cs-stat-label">ICP Purity via Global Purge</span>
-                </div>
+            <!-- Title -->
+            <h1 class="cs-article-title">Hiring Signal-Based Account Discovery</h1>
+
+            <!-- Intro -->
+            <p class="cs-article-intro">I built a Clay workflow for a nearshoring company to identify US tech companies actively hiring software engineers and qualify them for outbound.</p>
+
+            <p class="cs-article-lead">Most nearshoring agencies spray and pray toward any US tech company. I engineered a system that identifies <strong>active hiring signals</strong> and <strong>distributed team patterns</strong> to find the 1% of companies ready to hire <em>now</em>.</p>
+
+            <hr class="cs-article-divider">
+
+            <!-- Section 1 -->
+            <div class="cs-article-section">
+                <h2>1. Score The Signals</h2>
+                <p>I don't just find a company name; I map their technical DNA and hiring friction.</p>
+                <p>I analyze:</p>
+                <ul>
+                    <li><strong>Live Hiring Activity:</strong> Software Engineer and Software Developer roles as the primary intent trigger.</li>
+                    <li><strong>Velocity Flags:</strong> If the company is hiring multiple engineering roles and how many.</li>
+                    <li><strong>Funding Momentum:</strong> Checks if the company raised capital in the last 12 months.</li>
+                    <li><strong>Tech Stack Keywords:</strong> Detecting specific environments like React, Node, .NET, Java, Python, and AWS.</li>
+                </ul>
+                <p>Because if a company is funded and hiring 5+ devs in a specific stack, they aren't just "growing"—they are hit with a recruitment bottleneck that nearshoring solves.</p>
             </div>
-        </section>
 
-        <!-- Divider -->
-        <div class="cs-divider"></div>
-
-        <!-- The Problem -->
-        <section class="cs-section container">
-            <div class="cs-section-label">The Problem</div>
-            <div class="cs-two-col">
-                <h2 class="cs-section-title">The entire market was targeting everyone.<br>Nobody was targeting the right moment.</h2>
-                <div class="cs-section-body">
-                    <p>Nearshoring agencies had a data problem disguised as a sales problem. They were sending generic outbound to massive static lists — any US tech company they could find — and wondering why conversion was flat.</p>
-                    <p>The real issue was timing and signal. A company only becomes a fit for nearshoring at a very specific inflection point: when they're actively trying to hire engineers they can't afford or find fast enough. That window is narrow. Miss it and the budget disappears into a local hire.</p>
-                    <p>My task was to build a Clay-powered engine that didn't just find companies — it identified the ones in that exact window, in real time, and routed them into a pitch that matched their specific situation.</p>
-                </div>
+            <!-- Section 2 -->
+            <div class="cs-article-section">
+                <h2>2. Map The "Offshore DNA"</h2>
+                <p>People say, "target the market."<br>But I map the <strong>readiness</strong>.</p>
+                <p>I'm not trying to find every tech company; I'm filtering for those already comfortable with remote, global talent.</p>
+                <p>My system detects existing distributed teams in:</p>
+                <ul>
+                    <li>Latin America (LATAM)</li>
+                    <li>Southeast Asia (SEA)</li>
+                    <li>Eastern Europe</li>
+                </ul>
+                <p>I also execute a <strong>Global Purge</strong>: The system automatically excludes staffing firms, recruiting agencies, dev shops, and consulting firms. My task is to expand the high-intent pipeline with 100% ICP purity.</p>
             </div>
-        </section>
 
-        <!-- System: Dark Section -->
-        <section class="cs-section cs-section--dark">
-            <div class="container">
-                <div class="cs-section-label cs-section-label--light">The System — 3 Layers</div>
-                <h2 class="cs-section-title cs-section-title--light">I don't find company names.<br>I map their technical DNA and hiring friction.</h2>
-
-                <!-- Step 1 -->
-                <div class="cs-step">
-                    <div class="cs-step-header">
-                        <span class="cs-step-num">01</span>
-                        <h3 class="cs-step-title">Score The Signals</h3>
-                    </div>
-                    <div class="cs-step-body">
-                        <p>Every company in the workflow is scored against a compound set of intent indicators. I don't use a single trigger — a company has to clear multiple thresholds before it enters the pipeline.</p>
-                        <div class="cs-signal-grid">
-                            <div class="cs-signal-card">
-                                <span class="cs-signal-icon">⚡</span>
-                                <strong>Live Hiring Activity</strong>
-                                <p>Software Engineer and Software Developer roles as the primary intent trigger. If they're actively posting, they're actively failing to fill.</p>
-                            </div>
-                            <div class="cs-signal-card">
-                                <span class="cs-signal-icon">📈</span>
-                                <strong>Velocity Flags</strong>
-                                <p>How many engineering roles are open simultaneously. A company hiring 5+ devs in the same stack isn't growing — they're hitting a recruitment bottleneck that nearshoring solves.</p>
-                            </div>
-                            <div class="cs-signal-card">
-                                <span class="cs-signal-icon">💰</span>
-                                <strong>Funding Momentum</strong>
-                                <p>Checks if the company raised capital in the last 12 months. Fresh funding means fresh headcount budget — and pressure to deploy it fast.</p>
-                            </div>
-                            <div class="cs-signal-card">
-                                <span class="cs-signal-icon">🧬</span>
-                                <strong>Tech Stack Keywords</strong>
-                                <p>Detecting specific environments: React, Node, .NET, Java, Python, AWS. Stack match determines which nearshoring team is the right fit.</p>
-                            </div>
-                        </div>
-                        <div class="cs-insight-box">
-                            <p>If a company is funded <em>and</em> hiring 5+ devs in a specific stack, they aren't just "growing" — they are hit with a recruitment bottleneck that nearshoring solves.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Step 2 -->
-                <div class="cs-step">
-                    <div class="cs-step-header">
-                        <span class="cs-step-num">02</span>
-                        <h3 class="cs-step-title">Map The "Offshore DNA"</h3>
-                    </div>
-                    <div class="cs-step-body">
-                        <p>People say "target the market." I map the <strong style="color: var(--accent-gold)">readiness</strong>. Finding a tech company is easy. Finding one already comfortable with remote, global talent — that's a different discipline.</p>
-                        <p>The system scans for existing distributed team patterns across three key regions:</p>
-                        <div class="cs-region-list">
-                            <div class="cs-region-item">Latin America (LATAM)</div>
-                            <div class="cs-region-item">Southeast Asia (SEA)</div>
-                            <div class="cs-region-item">Eastern Europe</div>
-                        </div>
-                        <p style="margin-top: 28px;">Companies with existing offshore headcount have already cleared the biggest psychological hurdle — trust in remote talent. They're exponentially easier to close.</p>
-                        <div class="cs-purge-box">
-                            <div class="cs-purge-label">Global Purge</div>
-                            <p>The system automatically excludes staffing firms, recruiting agencies, dev shops, and consulting firms. The goal is 100% ICP purity — high-intent companies, not industry noise.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Step 3 -->
-                <div class="cs-step">
-                    <div class="cs-step-header">
-                        <span class="cs-step-num">03</span>
-                        <h3 class="cs-step-title">Build Systems That Turn Data Into Adaptive Outbound</h3>
-                    </div>
-                    <div class="cs-step-body">
-                        <p>If your email is static, you're an operator. If your email <strong style="color: var(--accent-gold)">adapts</strong>, you're a GTM Engineer.</p>
-                        <p>I designed conditional logic that changes the pitch based on each company's specific hiring situation. Three scenarios. Three distinct narratives.</p>
-                        <div class="cs-scenario-grid">
-                            <div class="cs-scenario">
-                                <div class="cs-scenario-label">Scenario A</div>
-                                <div class="cs-scenario-condition">High hiring volume + Recent funding</div>
-                                <div class="cs-scenario-pitch">Speed to market pitch</div>
-                                <p>You raised. You need engineers yesterday. Here's how to deploy 5 devs in 30 days.</p>
-                            </div>
-                            <div class="cs-scenario">
-                                <div class="cs-scenario-label">Scenario B</div>
-                                <div class="cs-scenario-condition">Existing offshore headcount + Specific tech stack</div>
-                                <div class="cs-scenario-pitch">Scale and compatibility pitch</div>
-                                <p>You already work with remote teams. Here's a compatible, stack-specific team that plugs in without friction.</p>
-                            </div>
-                            <div class="cs-scenario">
-                                <div class="cs-scenario-label">Scenario C</div>
-                                <div class="cs-scenario-condition">First-time offshore + New funding</div>
-                                <div class="cs-scenario-pitch">Risk mitigation and talent density pitch</div>
-                                <p>You've never done this. Here's how to do it with zero risk, full oversight, and the right talent density from day one.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
+            <!-- Section 3 -->
+            <div class="cs-article-section">
+                <h2>3. Build Systems That Turn Data Into Adaptive Outbound</h2>
+                <p>If your email is static, you're an operator. If your email <strong>adapts</strong>, you're a GTM Engineer.</p>
+                <p>I designed conditional logic that changes the pitch based on the company's specific situation:</p>
+                <ul>
+                    <li><strong>Scenario A:</strong> High hiring volume + Recent funding = <em>Speed to market pitch.</em></li>
+                    <li><strong>Scenario B:</strong> Existing offshore headcount + Specific Tech Stack = <em>Scale and compatibility pitch.</em></li>
+                    <li><strong>Scenario C:</strong> First-time offshore + New funding = <em>Risk mitigation and talent density pitch.</em></li>
+                </ul>
+                <p>The output is a sales-ready Clay engine that identifies the <strong>Technical Core</strong> (CTO, VP Engineering, or Head of Engineering), enriches their verified LinkedIn/Email, and feeds them into a dynamic outreach machine.</p>
             </div>
-        </section>
 
-        <!-- Output Section -->
-        <section class="cs-section container">
-            <div class="cs-section-label">The Output</div>
-            <div class="cs-two-col">
-                <h2 class="cs-section-title">A sales-ready engine that identifies, enriches, and routes — automatically.</h2>
-                <div class="cs-section-body">
-                    <p>The end state of this workflow is a fully enriched lead record for the <strong>Technical Core</strong> — the CTO, VP Engineering, or Head of Engineering — with verified LinkedIn profile and email, routed directly into a dynamic outreach sequence.</p>
-                    <p>No SDR manually researching job boards. No guessing on pitch angle. The system already knows the company's situation and has selected the right narrative before a single person opens the email draft.</p>
-                    <div class="cs-output-stack">
-                        <div class="cs-output-item">
-                            <span class="cs-output-dot"></span>
-                            Clay — signal detection, enrichment, conditional logic
-                        </div>
-                        <div class="cs-output-item">
-                            <span class="cs-output-dot"></span>
-                            Smartlead — dynamic sequence delivery
-                        </div>
-                        <div class="cs-output-item">
-                            <span class="cs-output-dot"></span>
-                            Claygent — LinkedIn + email verification
-                        </div>
-                        <div class="cs-output-item">
-                            <span class="cs-output-dot"></span>
-                            AI Enrichment — tech stack detection, offshore DNA mapping
-                        </div>
-                    </div>
-                </div>
+            <hr class="cs-article-divider">
+
+            <!-- Closing -->
+            <div class="cs-article-closing">
+                <p class="cs-article-statement">The GTM Engine becomes a system that predicts who will buy before the first email is even sent.</p>
+
+                <p>This is why I say GTM Engineering is revenue engineering. If all you can do is "run outbound in Clay," you're an operator. A GTME understands:</p>
+                <ul>
+                    <li>Revenue patterns</li>
+                    <li>Hiring friction</li>
+                    <li>Adaptive logic</li>
+                    <li>Automation architecture</li>
+                </ul>
+                <p><strong>This is the difference between running a campaign and engineering the entire revenue machine.</strong></p>
             </div>
-        </section>
 
-        <!-- Closing Statement -->
-        <section class="cs-section cs-section--cream">
-            <div class="container cs-closing">
-                <h2 class="cs-closing-headline">The GTM Engine becomes a system that predicts<br>who will buy before the first email is even sent.</h2>
-                <div class="cs-closing-body">
-                    <p>This is why I say GTM Engineering is revenue engineering. If all you can do is "run outbound in Clay," you're an operator. A GTME understands revenue patterns, hiring friction, adaptive logic, and automation architecture — and knows how to turn raw signals into systems that print revenue.</p>
-                    <div class="cs-capability-list">
-                        <span>Revenue patterns</span>
-                        <span>Hiring friction</span>
-                        <span>Adaptive logic</span>
-                        <span>Automation architecture</span>
-                        <span>Signal → System → Revenue</span>
-                    </div>
-                </div>
-                <blockquote class="cs-quote cs-quote--large">
-                    "The difference between running a campaign and engineering the entire revenue machine."
-                </blockquote>
+            <!-- CTA -->
+            <div class="cs-article-cta">
+                <a href="https://www.linkedin.com/in/iyiolaoluwa-neil-uko-20b450173" class="cs-cta-btn" target="_blank">Let's Talk on LinkedIn &rarr;</a>
+                <a href="case-study-web-scraper.html" class="cs-next-link">Next Case Study: Custom Web Scraper &rarr;</a>
             </div>
-        </section>
 
-        <!-- CTA -->
-        <section class="cs-cta container">
-            <h2>Want a system like this<br>built for your team?</h2>
-            <a href="https://www.linkedin.com/in/iyiolaoluwa-neil-uko-20b450173" class="cs-cta-btn" target="_blank">Let's Talk on LinkedIn &rarr;</a>
-            <a href="case-study-web-scraper.html" class="cs-next-link">Next Case Study: Custom Web Scraper &rarr;</a>
-        </section>
+        </div>
     </main>
 
     <script src="script.js"></script>
