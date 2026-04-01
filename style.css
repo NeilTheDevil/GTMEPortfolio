@@ -554,7 +554,7 @@ body {
 
 /* --- Mobile Responsiveness --- */
 @media (max-width: 1024px) {
-    .community-grid-new, .about-flex, .loom-grid, .automation-highlights {
+    .community-grid-new, .about-flex, .loom-grid, .automation-highlights, .workflow-visuals, .project-header {
         grid-template-columns: 1fr;
     }
     
@@ -653,6 +653,22 @@ body {
 
     .highlight-box {
         padding: 20px;
+    }
+
+    .workflow-visuals {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .workflow-image {
+        padding: 30px 20px;
+        height: auto;
+        aspect-ratio: auto;
+    }
+
+    .project-header {
+        grid-template-columns: 1fr;
+        padding: 60px 0;
     }
 
     .community-gallery {
