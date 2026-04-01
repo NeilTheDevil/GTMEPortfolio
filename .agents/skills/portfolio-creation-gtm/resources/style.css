@@ -36,9 +36,9 @@ body {
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
-    padding: 0 80px;
+    padding: 0 50px;
 }
 
 /* --- Navigation --- */
@@ -99,8 +99,8 @@ body {
 }
 
 .editorial-headline {
-    font-size: clamp(3rem, 8vw, 6rem);
-    line-height: 0.95;
+    font-size: clamp(4rem, 12vw, 9rem);
+    line-height: 0.85;
     font-weight: 900;
     letter-spacing: -0.06em;
 }
@@ -173,80 +173,31 @@ body {
     padding: 24px;
     border-radius: 16px;
     border: 1px solid rgba(0, 0, 0, 0.08);
-    text-decoration: none;
-    color: inherit;
-    display: block;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
     transition: var(--transition);
 }
 
-.loom-thumbnail {
-    position: relative;
-    width: 100%;
+.loom-card:hover {
+    transform: translateY(-10px);
+    border-color: #000;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+.video-placeholder {
     aspect-ratio: 16/9;
-    border-radius: 15px;
-    overflow: hidden;
     background: #f0f0f0;
-    margin-bottom: 15px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-}
-
-.loom-thumbnail img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: var(--transition);
-}
-
-.thumbnail-placeholder {
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, #001A3D 0%, #000C24 100%);
-}
-
-.play-button {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 60px;
-    height: 60px;
-    background: rgba(255, 255, 255, 0.9);
-    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-    transition: var(--transition);
-    z-index: 2;
-}
-
-.play-button svg {
-    width: 24px;
-    height: 24px;
-    color: var(--navy);
-    margin-left: 4px; /* Optical centering */
-}
-
-.loom-card:hover .loom-thumbnail img {
-    transform: scale(1.05);
-}
-
-.loom-card:hover .play-button {
-    transform: translate(-50%, -50%) scale(1.1);
-    background: #fff;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+    margin-bottom: 20px;
+    font-size: 0.85rem;
+    color: var(--text-muted);
 }
 
 .loom-card p {
     font-size: 1rem;
-    font-weight: 500;
-    color: var(--navy);
-    opacity: 0.8;
-}
-
-.loom-card:hover p {
-    opacity: 1;
-    color: var(--gold);
+    font-weight: 600;
 }
 
 /* --- Stats (Lead Gen) --- */
@@ -378,8 +329,8 @@ body {
 
 .community-gallery {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-auto-rows: 250px;
+    grid-template-columns: 1.5fr 1fr;
+    grid-template-rows: auto auto;
     gap: 15px;
 }
 
@@ -387,18 +338,17 @@ body {
     grid-row: span 2;
 }
 
-.community-gallery div img {
+.skeleton-event {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    background: #eee;
     border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-    transition: var(--transition);
-}
-
-.community-gallery div:hover img {
-    transform: scale(1.02);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    min-height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    color: #999;
 }
 
 .community-list-content {
@@ -469,12 +419,15 @@ body {
     margin-bottom: 30px;
 }
 
-.about-portrait-secondary img {
+.portrait-placeholder {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    aspect-ratio: 1/1;
+    background: #f0f0f0;
     border-radius: 20px;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #aaa;
 }
 
 /* --- Final CTA (MATCHING SCREENSHOT) --- */
@@ -552,207 +505,8 @@ body {
     transform: translateY(0);
 }
 
-/* --- Mobile Responsiveness --- */
 @media (max-width: 1024px) {
-    .community-grid-new, .about-flex, .loom-grid, .automation-highlights, .workflow-visuals, .project-header {
+    .community-grid-new, .about-flex, .loom-grid, .automation-highlights, .tool-grid {
         grid-template-columns: 1fr;
-    }
-    
-    .tool-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 768px) {
-    .container {
-        padding: 0 60px; /* Maximum breathing room */
-        box-sizing: border-box;
-    }
-
-    .nav {
-        padding: 60px 0 20px;
-    }
-
-    .nav-content {
-        justify-content: flex-start; /* Keep logo on left as requested */
-    }
-
-    .nav-links {
-        display: none;
-    }
-
-    .hero {
-        padding: 40px 0 60px;
-    }
-
-    .hero-header {
-        flex-direction: column;
-        align-items: center; /* Center to avoid edge-clumping */
-        text-align: center;
-        gap: 30px;
-    }
-
-    .editorial-headline {
-        font-size: 1.7rem; /* Perfectly scaled for 60px margins */
-        line-height: 1.25;
-        letter-spacing: -0.04em;
-        word-wrap: break-word;
-        max-width: 100%;
-    }
-
-    .hero-image {
-        width: 100%;
-        max-width: 100%;
-        height: auto;
-        aspect-ratio: 1/1;
-        order: -1;
-    }
-
-    .hero-intro {
-        margin-top: 30px;
-        text-align: center;
-    }
-
-    .intro-text {
-        font-size: 1.05rem;
-        line-height: 1.6;
-    }
-
-    .section-label {
-        font-size: 0.9rem;
-        margin-bottom: 30px;
-        text-align: center; /* Balanced feel */
-    }
-
-    .section-intro {
-        font-size: 1.05rem;
-        margin-bottom: 40px;
-        text-align: center;
-    }
-
-    .loom-grid {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
-
-    .massive-stat {
-        font-size: 2.8rem;
-    }
-
-    .stats-hero p {
-        font-size: 0.95rem;
-        text-align: center;
-    }
-
-    .tool-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 10px;
-    }
-
-    .tool-grid span {
-        padding: 15px;
-        font-size: 0.8rem;
-    }
-
-    .automation-highlights {
-        grid-template-columns: 1fr;
-        gap: 15px;
-    }
-
-    .highlight-box {
-        padding: 20px;
-    }
-
-    .workflow-visuals {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
-    .workflow-image {
-        padding: 30px 20px;
-        height: auto;
-        aspect-ratio: auto;
-        text-align: center;
-    }
-
-    .work-section {
-        padding: 120px 0 60px;
-    }
-
-    .project-header {
-        grid-template-columns: 1fr;
-        padding: 60px 0;
-        text-align: center; /* Unified centering */
-    }
-
-    .project-title h2 {
-        font-size: 1.6rem;
-    }
-
-    .community-engagement-section {
-        padding: 100px 0;
-    }
-
-    .community-grid-new {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-
-    .community-list-content {
-        padding-top: 40px;
-    }
-
-    .engagements {
-        align-items: center;
-    }
-
-    .engagements li {
-        text-align: center;
-        justify-content: center;
-    }
-
-    .gallery-large {
-        grid-row: span 1;
-    }
-
-    .about-flex {
-        flex-direction: column;
-        text-align: center;
-        gap: 40px;
-    }
-
-    .about-text-content h2 {
-        font-size: 1.7rem;
-    }
-
-    .final-cta {
-        padding: 80px 0;
-        text-align: center;
-    }
-
-    .cta-inner h2 {
-        font-size: 1.5rem;
-    }
-
-    .btn-cta {
-        width: 100%;
-        text-align: center;
-        padding: 20px 0;
-        font-size: 1rem;
-    }
-
-    .footer-bottom-new {
-        flex-direction: column;
-        gap: 30px;
-        text-align: center;
-    }
-
-    .socials {
-        justify-content: center;
-        gap: 30px; /* Better tap target */
-    }
-    
-    .socials a {
-        padding: 10px;
     }
 }
