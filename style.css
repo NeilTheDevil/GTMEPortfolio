@@ -574,7 +574,8 @@ body {
     }
 
     .nav-content {
-        justify-content: flex-start; /* Keep logo on left as requested */
+        justify-content: space-between; /* Space logo and menu apart */
+        align-items: center;
     }
 
     .nav-links {
