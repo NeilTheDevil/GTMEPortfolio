@@ -670,6 +670,10 @@ body {
         aspect-ratio: auto;
     }
 
+    .work-section {
+        padding: 100px 0 60px; /* More vertical air for the transition */
+    }
+
     .project-header {
         grid-template-columns: 1fr;
         padding: 60px 0;
