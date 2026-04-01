@@ -567,8 +567,10 @@ body {
 
 @media (max-width: 768px) {
     .container {
-        padding: 0 24px; /* Updated: 24px global side padding */
+        padding: 0 24px !important; /* Mandatory 24px Safety Gutter */
         box-sizing: border-box;
+        width: 100%;
+        max-width: 100%;
     }
 
     .nav {
@@ -586,7 +588,7 @@ body {
     .nav-content {
         justify-content: space-between;
         align-items: center;
-        padding: 0 20px; /* Logo/Menu pushed in by 20px */
+        padding: 0 24px; /* Aligned with content gutter */
     }
 
     .nav-links {
@@ -615,8 +617,8 @@ body {
         letter-spacing: -0.04em;
         overflow-wrap: break-word;
         word-wrap: break-word;
-        max-width: 90%; /* Columnar look for headers */
-        margin: 0 auto;
+        max-width: 100%; /* Floating within 24px margins */
+        text-wrap: balance;
     }
 
     .hero-image {
@@ -649,10 +651,11 @@ body {
     }
 
     .intro-text {
-        font-size: 1rem;
-        line-height: 1.6; /* Increased for legibility */
+        font-size: 1.1rem;
+        line-height: 1.25; /* Tight as requested */
         overflow-wrap: break-word;
-        max-width: 90%;
+        max-width: 100%; /* Spans full Gutter */
+        text-wrap: balance; /* Premium line breaks */
         margin: 0 auto;
     }
 
@@ -663,12 +666,12 @@ body {
     }
 
     .section-intro {
-        font-size: 0.95rem;
+        font-size: 1rem;
         margin-bottom: 30px;
         text-align: center;
         overflow-wrap: break-word;
         line-height: 1.6;
-        max-width: 90%;
+        max-width: 90%; /* Long-form description policy */
         margin: 0 auto;
     }
 
@@ -685,15 +688,14 @@ body {
         margin-bottom: 15px;
         overflow-wrap: break-word;
         word-wrap: break-word;
-        max-width: 90%;
-        margin: 0 auto 15px;
+        max-width: 100%;
     }
 
     .highlight-box p, .workflow-inner-desc p {
         font-size: 0.95rem;
         overflow-wrap: break-word;
         line-height: 1.6;
-        max-width: 90%;
+        max-width: 90%; /* Long-form description policy */
         margin: 0 auto;
     }
 
@@ -736,18 +738,23 @@ body {
     .project-title h2 {
         font-size: clamp(1.2rem, 6vw, 1.5rem); 
         overflow-wrap: break-word;
-        max-width: 90%;
-        margin: 0 auto 15px;
+        max-width: 100%;
     }
 
     .project-details p {
         line-height: 1.6;
-        max-width: 90%;
+        max-width: 90%; /* Long-form description policy */
         margin: 0 auto 10px;
     }
 
     .community-engagement-section {
         padding: 50px 0; /* Compressed air */
+    }
+
+    .engagements li {
+        padding-left: 15px; /* Indented bullets for safety */
+        justify-content: flex-start;
+        text-align: left;
     }
 
     .about-flex {
@@ -758,19 +765,20 @@ body {
 
     .about-text-content p {
         line-height: 1.6;
-        max-width: 90%;
+        max-width: 90%; /* Long-form description policy */
         margin: 0 auto 20px;
     }
 
     .final-cta {
         padding: 50px 0;
         text-align: center;
+        width: 100%;
+        max-width: 100%;
     }
 
     .cta-inner h2 {
         font-size: 1.4rem;
-        max-width: 90%;
-        margin: 0 auto 30px;
+        max-width: 100%;
     }
 
     .footer-bottom-new {
