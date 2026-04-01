@@ -437,6 +437,40 @@ body {
     transition: var(--transition);
 }
 
+.project-header:hover {
+    opacity: 0.85;
+}
+
+/* Project headline links */
+.project-link {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.2s ease;
+}
+
+.project-link:hover {
+    color: var(--accent-gold);
+}
+
+/* 'View Case Study →' read-more link */
+.cs-read-more {
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--accent-gold);
+    border-bottom: 1px solid transparent;
+    padding-bottom: 2px;
+    transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.cs-read-more:hover {
+    border-color: var(--accent-gold);
+}
+
 /* --- Community Engagement (NEW GALLERY STYLE) --- */
 .community-engagement-section {
     padding: 150px 0;

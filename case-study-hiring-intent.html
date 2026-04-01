@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hiring Intent & Signal-Based Outbound | Neil Uko</title>
+    <meta name="description" content="A deep-dive into how Neil Uko architected a signal-based outbound system triggering on hiring intent data to maximise lead relevance and revenue efficiency.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="case-study.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="nav container">
+        <div class="nav-content">
+            <a href="index.html" class="logo">NEIL</a>
+            <ul class="nav-links">
+                <li><a href="index.html#engineering">Engineering</a></li>
+                <li><a href="index.html#work">Work</a></li>
+                <li><a href="index.html#community">Engagement</a></li>
+                <li><a href="index.html#about">About</a></li>
+            </ul>
+            <div class="mobile-menu-toggle" id="mobileMenuToggle">MENU</div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+        <div class="close-menu" id="closeMenu">CLOSE</div>
+        <ul class="mobile-nav-links">
+            <li><a href="index.html#engineering">Engineering</a></li>
+            <li><a href="index.html#work">Work</a></li>
+            <li><a href="index.html#community">Engagement</a></li>
+            <li><a href="index.html#about">About Me</a></li>
+            <li><a href="https://www.linkedin.com/in/iyiolaoluwa-neil-uko-20b450173" class="btn-cta-mobile" target="_blank">Let's Talk</a></li>
+        </ul>
+    </div>
+
+    <main>
+        <!-- Case Study Hero -->
+        <section class="cs-hero container">
+            <div class="cs-back-link">
+                <a href="index.html#work">&larr; Back to Work</a>
+            </div>
+            <div class="cs-meta">
+                <span class="tool-tag">GTM Tooling (Smartlead, Clay)</span>
+                <span class="cs-type">High-Precision Targeting / Nearshoring Use Case</span>
+            </div>
+            <h1 class="cs-title">Hiring Intent &amp;<br>Signal-Based Outbound</h1>
+            <p class="cs-subtitle">Architecting outbound systems that trigger based on real hiring signals and intent data — ensuring every message lands at exactly the right moment.</p>
+
+            <div class="cs-stats-bar">
+                <div class="cs-stat">
+                    <span class="cs-stat-num">3×</span>
+                    <span class="cs-stat-label">Reply Rate Lift</span>
+                </div>
+                <div class="cs-stat">
+                    <span class="cs-stat-num">~70%</span>
+                    <span class="cs-stat-label">Less Manual Research</span>
+                </div>
+                <div class="cs-stat">
+                    <span class="cs-stat-num">Clay + Smartlead</span>
+                    <span class="cs-stat-label">Core Stack</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Divider -->
+        <div class="cs-divider"></div>
+
+        <!-- The Problem -->
+        <section class="cs-section container">
+            <div class="cs-section-label">01 — The Problem</div>
+            <div class="cs-two-col">
+                <h2 class="cs-section-title">Spray-and-pray outbound was killing conversion</h2>
+                <div class="cs-section-body">
+                    <p>Most outbound teams were sending cold emails to static lists with no real signal of buying intent. The result was low reply rates, irrelevant messaging, and SDR teams burning pipeline on companies that had no immediate need.</p>
+                    <p>For nearshoring businesses in particular, the timing window is extremely narrow — a company actively opening roles they can't fill locally is a high-intent signal. But capturing that signal in real time, at scale, required a different kind of infrastructure.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- The System -->
+        <section class="cs-section cs-section--dark">
+            <div class="container">
+                <div class="cs-section-label cs-section-label--light">02 — The System</div>
+                <h2 class="cs-section-title cs-section-title--light">A real-time trigger engine built on hiring data</h2>
+                <div class="cs-system-grid">
+                    <div class="cs-system-card">
+                        <div class="cs-system-num">01</div>
+                        <h3>Signal Detection</h3>
+                        <p>Clay tables are configured to pull real-time job postings from LinkedIn, Indeed, and company career pages. Filters are set to surface specific roles that indicate a nearshoring window (e.g., "Sales Development Rep" or "Data Entry Analyst" postings in high-cost markets).</p>
+                    </div>
+                    <div class="cs-system-card">
+                        <div class="cs-system-num">02</div>
+                        <h3>Enrichment & Scoring</h3>
+                        <p>Each triggering company is enriched via Claygent and third-party data providers. Fields pulled: headcount growth velocity, tech stack, decision-maker contact, and open role count. A compound score determines outreach priority.</p>
+                    </div>
+                    <div class="cs-system-card">
+                        <div class="cs-system-num">03</div>
+                        <h3>Personalised Sequencing</h3>
+                        <p>High-scoring leads push directly into Smartlead with dynamically generated first lines that reference the specific role they are hiring for and the cost delta of nearshoring that role. No generic copy. Every email is contextually relevant.</p>
+                    </div>
+                    <div class="cs-system-card">
+                        <div class="cs-system-num">04</div>
+                        <h3>CRM Sync & Routing</h3>
+                        <p>Replies and positive signals are automatically routed to the CRM with enriched data attached — no manual copy-paste. SDRs receive a pre-warmed lead with full context instead of a raw contact.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- The Stack -->
+        <section class="cs-section container">
+            <div class="cs-section-label">03 — The Stack</div>
+            <h2 class="cs-section-title">Tools & Technologies</h2>
+            <div class="cs-stack-grid">
+                <div class="cs-stack-item">
+                    <span class="cs-stack-name">Clay</span>
+                    <span class="cs-stack-role">Signal detection, enrichment & orchestration</span>
+                </div>
+                <div class="cs-stack-item">
+                    <span class="cs-stack-name">Smartlead</span>
+                    <span class="cs-stack-role">Multi-channel outbound sequencing</span>
+                </div>
+                <div class="cs-stack-item">
+                    <span class="cs-stack-name">Claygent (AI)</span>
+                    <span class="cs-stack-role">Autonomous company research & enrichment</span>
+                </div>
+                <div class="cs-stack-item">
+                    <span class="cs-stack-name">LinkedIn / Job APIs</span>
+                    <span class="cs-stack-role">Real-time hiring signal source</span>
+                </div>
+                <div class="cs-stack-item">
+                    <span class="cs-stack-name">CRM (HubSpot)</span>
+                    <span class="cs-stack-role">Lead routing & pipeline management</span>
+                </div>
+                <div class="cs-stack-item">
+                    <span class="cs-stack-name">n8n / Webhooks</span>
+                    <span class="cs-stack-role">Automation glue & trigger orchestration</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- The Outcome -->
+        <section class="cs-section cs-section--cream">
+            <div class="container">
+                <div class="cs-section-label">04 — The Outcome</div>
+                <div class="cs-two-col">
+                    <h2 class="cs-section-title">Measurable results, not vanity metrics</h2>
+                    <div class="cs-section-body">
+                        <p>By switching from list-based cold outreach to intent-triggered precision targeting, the client saw a significant improvement in reply rates and qualified meeting bookings. More importantly, the system reduced the time SDRs spent on manual research by roughly 70%, allowing them to focus on conversations rather than data work.</p>
+                        <p>The nearshoring pitch landed harder because it was delivered at exactly the right moment — when the company was already feeling the cost of filling those roles locally. Timing, as it turns out, is the most important form of personalisation.</p>
+                        <blockquote class="cs-quote">
+                            "The difference between a cold email and the right email at the right time is the entire gap between a 1% and a 12% reply rate."
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="cs-cta container">
+            <h2>Want a system like this<br>built for your team?</h2>
+            <a href="https://www.linkedin.com/in/iyiolaoluwa-neil-uko-20b450173" class="cs-cta-btn" target="_blank">Let's Talk on LinkedIn &rarr;</a>
+            <a href="case-study-web-scraper.html" class="cs-next-link">Next Case Study: Custom Web Scraper &rarr;</a>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
