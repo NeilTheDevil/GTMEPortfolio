@@ -33,6 +33,8 @@ html {
 body {
     overflow-x: hidden;
     line-height: 1.5;
+    width: 100%;
+    max-width: 100%;
 }
 
 .container {
@@ -608,6 +610,8 @@ body {
         line-height: 1.1;
         letter-spacing: -0.04em;
         overflow-wrap: break-word;
+        word-wrap: break-word;
+        max-width: 100%;
     }
 
     .hero-image {
@@ -622,6 +626,16 @@ body {
     .hero-image img {
         object-fit: cover;
         object-position: top; /* Prevents awkward head-cropping */
+    }
+
+    .workflow-image {
+        padding: 30px 15px; /* Reduced side padding to prevent overflow */
+        height: auto;
+        aspect-ratio: auto;
+        text-align: center;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
     }
 
     .hero-intro {
@@ -651,16 +665,19 @@ body {
     .loom-grid, .automation-highlights, .workflow-visuals {
         grid-template-columns: 1fr;
         gap: 20px;
+        width: 100%;
+        max-width: 100%;
     }
 
-    .highlight-box h3 {
+    .highlight-box h3, .workflow-inner-desc h3 {
         font-size: 1.3rem; /* Scaled down for zero clipping */
         line-height: 1.2;
         margin-bottom: 15px;
         overflow-wrap: break-word;
+        word-wrap: break-word;
     }
 
-    .highlight-box p {
+    .highlight-box p, .workflow-inner-desc p {
         font-size: 0.95rem;
         overflow-wrap: break-word;
     }
