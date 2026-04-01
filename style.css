@@ -565,7 +565,7 @@ body {
 
 @media (max-width: 768px) {
     .container {
-        padding: 0 35px; /* Stable, breathable margins */
+        padding: 0 50px; /* Increased padding to push text away from the left edge */
         box-sizing: border-box;
     }
 
