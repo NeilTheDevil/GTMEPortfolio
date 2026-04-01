@@ -554,18 +554,26 @@ body {
 
 /* --- Mobile Responsiveness --- */
 @media (max-width: 1024px) {
-    .community-grid-new, .about-flex, .loom-grid, .automation-highlights, .tool-grid {
+    .community-grid-new, .about-flex, .loom-grid, .automation-highlights {
         grid-template-columns: 1fr;
+    }
+    
+    .tool-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (max-width: 768px) {
     .container {
-        padding: 0 25px;
+        padding: 0 20px;
     }
 
     .nav {
-        padding: 20px 0;
+        padding: 30px 0;
+    }
+
+    .nav-content {
+        justify-content: flex-start;
     }
 
     .nav-links {
@@ -573,53 +581,83 @@ body {
     }
 
     .hero {
-        padding: 60px 0 80px;
+        padding: 40px 0 60px;
     }
 
     .hero-header {
         flex-direction: column;
-        align-items: center;
-        text-align: center;
-        gap: 40px;
+        align-items: flex-start;
+        text-align: left;
+        gap: 30px;
     }
 
     .editorial-headline {
-        font-size: 3.2rem;
+        font-size: 2.8rem;
         line-height: 1.1;
         letter-spacing: -0.04em;
     }
 
     .hero-image {
         width: 100%;
-        max-width: 320px;
-        order: -1; /* Image above text on mobile */
+        max-width: 100%;
+        height: auto;
+        aspect-ratio: 1/1;
+        order: -1;
     }
 
     .hero-intro {
-        margin-top: 40px;
-        text-align: center;
+        margin-top: 30px;
     }
 
     .intro-text {
-        font-size: 1.35rem;
+        font-size: 1.2rem;
+    }
+
+    .section-label {
+        font-size: 1.1rem;
+        margin-bottom: 30px;
+    }
+
+    .section-intro {
+        font-size: 1.2rem;
+        margin-bottom: 40px;
     }
 
     .loom-grid {
         grid-template-columns: 1fr;
-        gap: 40px;
-    }
-
-    .stats-hero {
-        margin: 40px 0;
+        gap: 30px;
     }
 
     .massive-stat {
-        font-size: 5rem;
+        font-size: 4rem;
+    }
+
+    .stats-hero p {
+        font-size: 1.25rem;
+    }
+
+    .tool-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .tool-grid span {
+        padding: 15px;
+        font-size: 0.9rem;
+    }
+
+    .automation-highlights {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .highlight-box {
+        padding: 20px;
     }
 
     .community-gallery {
         grid-template-columns: 1fr;
-        grid-auto-rows: auto;
+        grid-auto-rows: 300px;
     }
 
     .gallery-large {
@@ -628,34 +666,40 @@ body {
 
     .about-flex {
         flex-direction: column;
-        text-align: center;
-        gap: 60px;
+        text-align: left;
+        gap: 40px;
     }
 
     .about-text-content h2 {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
     }
 
     .about-portrait-secondary {
         width: 100%;
-        height: 400px;
+        height: 350px;
     }
 
     .final-cta {
-        padding: 80px 0;
+        padding: 60px 0;
     }
 
     .cta-inner h2 {
-        font-size: 2rem;
+        font-size: 1.75rem;
+    }
+
+    .btn-cta {
+        width: 100%;
+        text-align: center;
+        padding: 18px 0;
     }
 
     .footer-bottom-new {
         flex-direction: column;
         gap: 20px;
-        text-align: center;
+        text-align: left;
     }
 
     .socials {
-        justify-content: center;
+        justify-content: flex-start;
     }
 }
