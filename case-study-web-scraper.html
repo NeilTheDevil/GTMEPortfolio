@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Custom Web & Directory Scraper | Neil Uko</title>
-    <meta name="description" content="A deep-dive into how Neil Uko built a custom autonomous web scraper in Claude Code to eliminate manual data research and replace expensive Claygent dependency.">
+    <title>High-Fidelity Business Data Enrichment | Neil Uko</title>
+    <meta name="description" content="How Neil Uko engineered a specialized data enrichment protocol to transform raw local business lists into verified, confidence-scored, sales-ready databases.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
@@ -13,7 +13,6 @@
 </head>
 <body>
 
-    <!-- Navigation -->
     <nav class="nav container">
         <div class="nav-content">
             <a href="index.html" class="logo">NEIL</a>
@@ -27,7 +26,6 @@
         </div>
     </nav>
 
-    <!-- Mobile Menu Overlay -->
     <div class="mobile-menu-overlay" id="mobileMenuOverlay">
         <div class="close-menu" id="closeMenu">CLOSE</div>
         <ul class="mobile-nav-links">
@@ -39,136 +37,85 @@
         </ul>
     </div>
 
-    <main>
-        <!-- Case Study Hero -->
-        <section class="cs-hero container">
+    <main class="cs-article-page">
+
+        <div class="cs-article-container">
+
             <div class="cs-back-link">
                 <a href="index.html#work">&larr; Back to Work</a>
             </div>
+
             <div class="cs-meta">
                 <span class="tool-tag">Custom Engineering / Claude Code</span>
-                <span class="cs-type">Systems Discovery / Data Infrastructure</span>
+                <span class="cs-type">Local Business Intelligence Protocol</span>
             </div>
-            <h1 class="cs-title">Custom Web &amp;<br>Directory Scraper</h1>
-            <p class="cs-subtitle">An autonomous Claude Code workflow that searches the internet for missing company data — eliminating manual research and dramatically reducing Claygent dependency.</p>
 
-            <div class="cs-stats-bar">
-                <div class="cs-stat">
-                    <span class="cs-stat-num">~80%</span>
-                    <span class="cs-stat-label">Cost Reduction vs Claygent</span>
-                </div>
-                <div class="cs-stat">
-                    <span class="cs-stat-num">Autonomous</span>
-                    <span class="cs-stat-label">Zero Manual Research</span>
-                </div>
-                <div class="cs-stat">
-                    <span class="cs-stat-num">Claude Code</span>
-                    <span class="cs-stat-label">Core Engine</span>
-                </div>
+            <h1 class="cs-article-title">High-Fidelity Business Data Enrichment</h1>
+
+            <p class="cs-article-intro">I engineered a specialized data enrichment protocol for a client who needed to transform raw, messy local business lists into a structured, verified CSV database for high-stakes outbound.</p>
+
+            <p class="cs-article-lead">Most data scrapers guess. I built a system that validates. By prioritizing Google Business Profiles and cross-referencing geographic signals, I ensured that the "official website" is never a guess, but a <strong>verified fact</strong>.</p>
+
+            <hr class="cs-article-divider">
+
+            <div class="cs-article-section">
+                <h2>1. The Primary Extraction Strategy</h2>
+                <p>I don't just search for a name; I engineer a search context that forces the most accurate result to the top.</p>
+                <p>I analyze:</p>
+                <ul>
+                    <li><strong>GBP Priority:</strong> The system treats Google Business Profiles as the "Single Source of Truth."</li>
+                    <li><strong>Keyword Injection:</strong> Automatically appending business type keywords (Cleaning, SaaS, Medical) to the search string to bypass "Name Twins" in other industries.</li>
+                    <li><strong>Geo-Fencing:</strong> Locking the search to the specific State and Country to eliminate false positives from different regions.</li>
+                </ul>
+                <p>Because if you are reaching out to a "Blue Sky Cleaning" in Texas, your data engine better not hand you the website for one in London.</p>
             </div>
-        </section>
 
-        <!-- Divider -->
-        <div class="cs-divider"></div>
-
-        <!-- The Problem -->
-        <section class="cs-section container">
-            <div class="cs-section-label">01 — The Problem</div>
-            <div class="cs-two-col">
-                <h2 class="cs-section-title">Claygent was expensive. Manual research was slower.</h2>
-                <div class="cs-section-body">
-                    <p>Data enrichment in GTM stacks is one of the highest recurring costs. Most teams rely on expensive AI agents like Claygent to find missing company fields — websites, employee counts, tech stacks, verticals — but at scale, this becomes a significant budget line.</p>
-                    <p>The alternative — manual Google searching — is simply not scalable. A researcher working through a list of 500 companies is both slow and inconsistent. The data quality varies, and the time cost is enormous.</p>
-                    <p>The challenge was building something that could do this autonomously, at scale, for a fraction of the cost — without sacrificing accuracy.</p>
-                </div>
+            <div class="cs-article-section">
+                <h2>2. Controlled Exploration &amp; Disambiguation</h2>
+                <p>People say, "find the link."<br>But I engineer the <strong>Validation Path</strong>.</p>
+                <p>When a clear match isn't immediately available, my system enters a fallback loop across:</p>
+                <ul>
+                    <li>High-intent directories (Yelp, LinkedIn, Facebook Business).</li>
+                    <li>Chamber of Commerce listings.</li>
+                    <li>Social signal cross-referencing.</li>
+                </ul>
+                <p><strong>The Disambiguation Logic:</strong> If two businesses share a name, the system is hard-coded to reject the lead unless BOTH the location and business type are a 100% match. I prioritize an empty string over a "loose match" because bad data is more expensive than no data.</p>
             </div>
-        </section>
 
-        <!-- The System -->
-        <section class="cs-section cs-section--dark">
-            <div class="container">
-                <div class="cs-section-label cs-section-label--light">02 — The System</div>
-                <h2 class="cs-section-title cs-section-title--light">An autonomous research agent built in Claude Code</h2>
-                <div class="cs-system-grid">
-                    <div class="cs-system-card">
-                        <div class="cs-system-num">01</div>
-                        <h3>Input Processing</h3>
-                        <p>The workflow accepts a CSV or Google Sheet of companies with known fields (name, country, industry). Missing fields act as enrichment targets. The system intelligently identifies which data points are absent and queues them for autonomous research.</p>
-                    </div>
-                    <div class="cs-system-card">
-                        <div class="cs-system-num">02</div>
-                        <h3>Autonomous Google Search</h3>
-                        <p>Claude Code executes structured Google searches using a set of crafted queries per company. It prioritises official sources — company websites, LinkedIn pages, industry directories — over aggregator sites, reducing the noise-to-signal ratio.</p>
-                    </div>
-                    <div class="cs-system-card">
-                        <div class="cs-system-num">03</div>
-                        <h3>Intelligent Extraction</h3>
-                        <p>Retrieved pages are parsed in real time. Claude reads the content, extracts the target fields (website URL, employee count, HQ location, tech stack signals), and validates against known heuristics before writing the result.</p>
-                    </div>
-                    <div class="cs-system-card">
-                        <div class="cs-system-num">04</div>
-                        <h3>Confidence Scoring & Output</h3>
-                        <p>Each enriched field receives a confidence score. High-confidence enrichments are written directly to the output file. Lower-confidence results are flagged for a single human review touchpoint — maintaining accuracy without full manual effort.</p>
-                    </div>
-                </div>
+            <div class="cs-article-section">
+                <h2>3. The Multi-Point Validation Protocol</h2>
+                <p>If your data isn't verified, you're an operator. If your data is bulletproof, you're a GTM Engineer.</p>
+                <p>Before any website is committed to the final output, it must pass a mandatory 4-point check:</p>
+                <ul>
+                    <li><strong>Name Consistency:</strong> Exact or high-confidence variation.</li>
+                    <li><strong>Geographic Alignment:</strong> City/State consistency check.</li>
+                    <li><strong>Category Match:</strong> Do the services listed match the input intent?</li>
+                    <li><strong>Contact Sync:</strong> Do phone numbers/addresses align across multiple sources?</li>
+                </ul>
+                <p>The Result: A structured CSV output with Confidence Scoring (High | Medium | Low | None) and a Reasoning Log, giving the sales team total transparency into why a lead was qualified or rejected.</p>
             </div>
-        </section>
 
-        <!-- The Stack -->
-        <section class="cs-section container">
-            <div class="cs-section-label">03 — The Stack</div>
-            <h2 class="cs-section-title">Tools & Technologies</h2>
-            <div class="cs-stack-grid">
-                <div class="cs-stack-item">
-                    <span class="cs-stack-name">Claude Code</span>
-                    <span class="cs-stack-role">Core autonomous research engine</span>
-                </div>
-                <div class="cs-stack-item">
-                    <span class="cs-stack-name">Google Search API</span>
-                    <span class="cs-stack-role">Automated web search queries</span>
-                </div>
-                <div class="cs-stack-item">
-                    <span class="cs-stack-name">Python</span>
-                    <span class="cs-stack-role">Workflow orchestration & output handling</span>
-                </div>
-                <div class="cs-stack-item">
-                    <span class="cs-stack-name">BeautifulSoup / Parsing</span>
-                    <span class="cs-stack-role">HTML content extraction</span>
-                </div>
-                <div class="cs-stack-item">
-                    <span class="cs-stack-name">Google Sheets / CSV</span>
-                    <span class="cs-stack-role">Input/output data interface</span>
-                </div>
-                <div class="cs-stack-item">
-                    <span class="cs-stack-name">Clay Integration</span>
-                    <span class="cs-stack-role">Enriched data fed back into GTM tables</span>
-                </div>
+            <hr class="cs-article-divider">
+
+            <div class="cs-article-closing">
+                <p class="cs-article-statement">The GTM Engine becomes a system that ensures your outbound never hits a "dead end."</p>
+
+                <p>This is why I say GTM Engineering is revenue engineering. If all you can do is "find a website," you're a scraper. A GTME understands:</p>
+                <ul>
+                    <li>Data integrity</li>
+                    <li>Geographic disambiguation</li>
+                    <li>Validation logic</li>
+                    <li>Confidence architecture</li>
+                </ul>
+                <p><strong>This is the difference between having a list and having a pipeline.</strong></p>
             </div>
-        </section>
 
-        <!-- The Outcome -->
-        <section class="cs-section cs-section--cream">
-            <div class="container">
-                <div class="cs-section-label">04 — The Outcome</div>
-                <div class="cs-two-col">
-                    <h2 class="cs-section-title">A resilient, cost-efficient fallback to Claygent</h2>
-                    <div class="cs-section-body">
-                        <p>The custom scraper now runs as a first-pass enrichment layer. Before a single Claygent credit is spent, this workflow attempts to fill the missing fields autonomously. For companies with a strong web presence, it achieves near-complete enrichment at effectively zero marginal cost.</p>
-                        <p>Claygent is now reserved for the genuinely hard lookups — obscure private companies with minimal public data. This change alone reduced enrichment costs significantly for the teams that adopted it.</p>
-                        <blockquote class="cs-quote">
-                            "The best GTM infrastructure isn't always the most expensive — it's the one that knows when not to spend budget."
-                        </blockquote>
-                    </div>
-                </div>
+            <div class="cs-article-cta">
+                <a href="https://www.linkedin.com/in/iyiolaoluwa-neil-uko-20b450173" class="cs-cta-btn" target="_blank">Let's Talk on LinkedIn &rarr;</a>
+                <a href="case-study-hiring-intent.html" class="cs-next-link">Next Case Study: Hiring Signal-Based Discovery &rarr;</a>
             </div>
-        </section>
 
-        <!-- CTA -->
-        <section class="cs-cta container">
-            <h2>Want a custom data tool<br>built for your stack?</h2>
-            <a href="https://www.linkedin.com/in/iyiolaoluwa-neil-uko-20b450173" class="cs-cta-btn" target="_blank">Let's Talk on LinkedIn &rarr;</a>
-            <a href="case-study-hiring-intent.html" class="cs-next-link">Next Case Study: Hiring Intent &rarr;</a>
-        </section>
+        </div>
     </main>
 
     <script src="script.js"></script>
