@@ -355,14 +355,106 @@
         font-size: clamp(1.5rem, 6vw, 2rem);
     }
 
+    /* Signal grid: stacked list on mobile */
     .cs-signal-grid {
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        background: transparent;
+        border-radius: 0;
+        overflow: visible;
     }
 
+    .cs-signal-card {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        padding: 24px 0 24px 20px;
+        background: transparent !important;
+        border-left: 3px solid var(--accent-gold);
+        border-radius: 0;
+        margin-bottom: 20px;
+    }
+
+    .cs-signal-icon {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+        display: block;
+    }
+
+    .cs-signal-card strong {
+        display: block !important;
+        font-size: 1rem !important;
+        font-weight: 700 !important;
+        color: #ffffff !important;
+        margin-bottom: 8px !important;
+        max-width: 100% !important;
+        width: 100% !important;
+        line-height: 1.3;
+    }
+
+    .cs-signal-card p {
+        display: block !important;
+        font-size: 0.9rem !important;
+        line-height: 1.6 !important;
+        color: rgba(255,255,255,0.65) !important;
+        margin: 0 !important;
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+
+    /* Step headers on mobile */
+    .cs-step-header {
+        gap: 14px;
+        margin-bottom: 28px;
+    }
+
+    .cs-step-title {
+        font-size: clamp(1.2rem, 6vw, 1.6rem);
+    }
+
+    .cs-step {
+        margin-bottom: 56px;
+        padding-bottom: 56px;
+    }
+
+    .cs-step-body > p {
+        max-width: 100% !important;
+        color: rgba(255,255,255,0.65) !important;
+    }
+
+    /* Insight box */
+    .cs-insight-box {
+        padding: 20px 20px;
+    }
+
+    /* Scenario grid: stacked on mobile */
     .cs-scenario-grid {
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        background: transparent;
+        border-radius: 0;
     }
 
+    .cs-scenario {
+        padding: 24px 0 24px 20px;
+        background: transparent !important;
+        border-left: 3px solid rgba(255,255,255,0.1);
+        border-radius: 0;
+        margin-bottom: 16px;
+    }
+
+    .cs-scenario-pitch {
+        font-size: 0.95rem;
+    }
+
+    .cs-scenario p {
+        color: rgba(255,255,255,0.55) !important;
+        max-width: 100% !important;
+    }
+
+    /* Closing */
     .cs-closing-headline {
         font-size: clamp(1.8rem, 7vw, 2.4rem);
     }
@@ -371,6 +463,26 @@
         flex-direction: column;
         align-items: flex-start;
         gap: 10px;
+    }
+
+    /* Region list */
+    .cs-region-list {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .cs-region-item {
+        font-size: 0.85rem;
+        padding: 8px 16px;
+    }
+
+    /* Purge box */
+    .cs-purge-box {
+        padding: 20px 20px;
+    }
+
+    .cs-purge-box p {
+        max-width: 100% !important;
     }
 }
 
@@ -412,7 +524,7 @@
     line-height: 1.1;
 }
 
-.cs-step-body p {
+.cs-step-body > p {
     font-size: 1rem;
     line-height: 1.75;
     color: rgba(255,255,255,0.65);
@@ -451,16 +563,20 @@
     display: block;
     font-size: 1rem;
     font-weight: 700;
-    color: #fff;
+    color: #ffffff;
     margin-bottom: 10px;
     letter-spacing: -0.01em;
+    max-width: 100%;
+    width: 100%;
 }
 
 .cs-signal-card p {
     font-size: 0.9rem;
     line-height: 1.65;
-    color: rgba(255,255,255,0.5);
+    color: rgba(255,255,255,0.55);
     margin: 0;
+    max-width: 100%;
+    width: 100%;
 }
 
 /* Insight callout box */
