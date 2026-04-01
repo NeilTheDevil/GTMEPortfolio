@@ -354,4 +354,301 @@
     .cs-section-title {
         font-size: clamp(1.5rem, 6vw, 2rem);
     }
+
+    .cs-signal-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cs-scenario-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cs-closing-headline {
+        font-size: clamp(1.8rem, 7vw, 2.4rem);
+    }
+
+    .cs-capability-list {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+}
+
+/* ============================================
+   STEP BLOCKS (for hiring intent page)
+   ============================================ */
+.cs-step {
+    margin-bottom: 80px;
+    padding-bottom: 80px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.cs-step:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.cs-step-header {
+    display: flex;
+    align-items: baseline;
+    gap: 24px;
+    margin-bottom: 40px;
+}
+
+.cs-step-num {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    color: var(--accent-gold);
+    flex-shrink: 0;
+}
+
+.cs-step-title {
+    font-size: clamp(1.4rem, 3vw, 2rem);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    color: #fff;
+    line-height: 1.1;
+}
+
+.cs-step-body p {
+    font-size: 1rem;
+    line-height: 1.75;
+    color: rgba(255,255,255,0.65);
+    margin-bottom: 20px;
+    max-width: 680px;
+}
+
+/* Signal Cards Grid */
+.cs-signal-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+    background: rgba(255,255,255,0.06);
+    border-radius: 16px;
+    overflow: hidden;
+    margin: 36px 0;
+}
+
+.cs-signal-card {
+    padding: 36px 32px;
+    background: rgba(255,255,255,0.03);
+    transition: background 0.25s ease;
+}
+
+.cs-signal-card:hover {
+    background: rgba(255,255,255,0.07);
+}
+
+.cs-signal-icon {
+    display: block;
+    font-size: 1.4rem;
+    margin-bottom: 14px;
+}
+
+.cs-signal-card strong {
+    display: block;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 10px;
+    letter-spacing: -0.01em;
+}
+
+.cs-signal-card p {
+    font-size: 0.9rem;
+    line-height: 1.65;
+    color: rgba(255,255,255,0.5);
+    margin: 0;
+}
+
+/* Insight callout box */
+.cs-insight-box {
+    padding: 28px 32px;
+    border-left: 3px solid var(--accent-gold);
+    background: rgba(184,134,11,0.08);
+    border-radius: 0 12px 12px 0;
+}
+
+.cs-insight-box p {
+    font-size: 1rem;
+    font-style: italic;
+    color: rgba(255,255,255,0.8) !important;
+    margin: 0 !important;
+    line-height: 1.65;
+}
+
+/* Region List */
+.cs-region-list {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin: 24px 0;
+}
+
+.cs-region-item {
+    padding: 10px 20px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 100px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: rgba(255,255,255,0.75);
+    letter-spacing: 0.02em;
+}
+
+/* Global Purge Box */
+.cs-purge-box {
+    margin-top: 36px;
+    padding: 28px 32px;
+    background: rgba(255,30,30,0.06);
+    border: 1px solid rgba(255,80,80,0.15);
+    border-radius: 12px;
+}
+
+.cs-purge-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #ff6b6b;
+    margin-bottom: 10px;
+}
+
+.cs-purge-box p {
+    font-size: 0.95rem;
+    line-height: 1.65;
+    color: rgba(255,255,255,0.6) !important;
+    margin: 0 !important;
+}
+
+/* Scenario Grid */
+.cs-scenario-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    background: rgba(255,255,255,0.06);
+    border-radius: 16px;
+    overflow: hidden;
+    margin-top: 36px;
+}
+
+.cs-scenario {
+    padding: 36px 28px;
+    background: rgba(255,255,255,0.02);
+    transition: background 0.25s ease;
+}
+
+.cs-scenario:hover {
+    background: rgba(255,255,255,0.06);
+}
+
+.cs-scenario-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent-gold);
+    margin-bottom: 12px;
+}
+
+.cs-scenario-condition {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+.cs-scenario-pitch {
+    font-size: 1rem;
+    font-weight: 800;
+    color: #fff;
+    letter-spacing: -0.02em;
+    margin-bottom: 14px;
+    line-height: 1.2;
+}
+
+.cs-scenario p {
+    font-size: 0.88rem;
+    line-height: 1.6;
+    color: rgba(255,255,255,0.45);
+    margin: 0;
+}
+
+/* Output stack list */
+.cs-output-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-top: 36px;
+}
+
+.cs-output-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.cs-output-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--accent-gold);
+    flex-shrink: 0;
+}
+
+/* Closing Statement */
+.cs-closing {
+    padding: 40px 0;
+}
+
+.cs-closing-headline {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 900;
+    letter-spacing: -0.04em;
+    line-height: 1.05;
+    color: var(--text-primary);
+    margin-bottom: 48px;
+    max-width: 820px;
+}
+
+.cs-closing-body {
+    max-width: 680px;
+    margin-bottom: 60px;
+}
+
+.cs-closing-body p {
+    font-size: 1.05rem;
+    line-height: 1.75;
+    color: var(--text-secondary);
+    margin-bottom: 36px;
+}
+
+.cs-capability-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.cs-capability-list span {
+    display: inline-block;
+    padding: 8px 18px;
+    background: var(--bg-main);
+    border: 1px solid var(--border);
+    border-radius: 100px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    letter-spacing: 0.02em;
+}
+
+.cs-quote--large {
+    font-size: 1.3rem;
+    max-width: 680px;
+    padding: 36px 40px;
 }

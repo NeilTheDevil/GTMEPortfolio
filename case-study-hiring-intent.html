@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hiring Intent & Signal-Based Outbound | Neil Uko</title>
-    <meta name="description" content="A deep-dive into how Neil Uko architected a signal-based outbound system triggering on hiring intent data to maximise lead relevance and revenue efficiency.">
+    <title>Hiring Signal-Based Account Discovery | Neil Uko</title>
+    <meta name="description" content="How Neil Uko built a Clay workflow for a nearshoring company to identify US tech companies actively hiring — and turn hiring signals into a precision outbound engine.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
@@ -46,24 +46,24 @@
                 <a href="index.html#work">&larr; Back to Work</a>
             </div>
             <div class="cs-meta">
-                <span class="tool-tag">GTM Tooling (Smartlead, Clay)</span>
-                <span class="cs-type">High-Precision Targeting / Nearshoring Use Case</span>
+                <span class="tool-tag">GTM tooling (Smartlead, Clay)</span>
+                <span class="cs-type">Nearshoring Use Case — US Tech Market</span>
             </div>
-            <h1 class="cs-title">Hiring Intent &amp;<br>Signal-Based Outbound</h1>
-            <p class="cs-subtitle">Architecting outbound systems that trigger based on real hiring signals and intent data — ensuring every message lands at exactly the right moment.</p>
+            <h1 class="cs-title">Hiring Signal-Based<br>Account Discovery</h1>
+            <p class="cs-subtitle">Most nearshoring agencies spray and pray toward any US tech company. I engineered a system that identifies active hiring signals and distributed team patterns to find the 1% of companies ready to hire <em>now</em>.</p>
 
             <div class="cs-stats-bar">
                 <div class="cs-stat">
-                    <span class="cs-stat-num">3×</span>
-                    <span class="cs-stat-label">Reply Rate Lift</span>
+                    <span class="cs-stat-num">1%</span>
+                    <span class="cs-stat-label">Target: Companies Ready to Buy Now</span>
                 </div>
                 <div class="cs-stat">
-                    <span class="cs-stat-num">~70%</span>
-                    <span class="cs-stat-label">Less Manual Research</span>
+                    <span class="cs-stat-num">5+ roles</span>
+                    <span class="cs-stat-label">Engineering Hiring Trigger</span>
                 </div>
                 <div class="cs-stat">
-                    <span class="cs-stat-num">Clay + Smartlead</span>
-                    <span class="cs-stat-label">Core Stack</span>
+                    <span class="cs-stat-num">100%</span>
+                    <span class="cs-stat-label">ICP Purity via Global Purge</span>
                 </div>
             </div>
         </section>
@@ -73,92 +73,163 @@
 
         <!-- The Problem -->
         <section class="cs-section container">
-            <div class="cs-section-label">01 — The Problem</div>
+            <div class="cs-section-label">The Problem</div>
             <div class="cs-two-col">
-                <h2 class="cs-section-title">Spray-and-pray outbound was killing conversion</h2>
+                <h2 class="cs-section-title">The entire market was targeting everyone.<br>Nobody was targeting the right moment.</h2>
                 <div class="cs-section-body">
-                    <p>Most outbound teams were sending cold emails to static lists with no real signal of buying intent. The result was low reply rates, irrelevant messaging, and SDR teams burning pipeline on companies that had no immediate need.</p>
-                    <p>For nearshoring businesses in particular, the timing window is extremely narrow — a company actively opening roles they can't fill locally is a high-intent signal. But capturing that signal in real time, at scale, required a different kind of infrastructure.</p>
+                    <p>Nearshoring agencies had a data problem disguised as a sales problem. They were sending generic outbound to massive static lists — any US tech company they could find — and wondering why conversion was flat.</p>
+                    <p>The real issue was timing and signal. A company only becomes a fit for nearshoring at a very specific inflection point: when they're actively trying to hire engineers they can't afford or find fast enough. That window is narrow. Miss it and the budget disappears into a local hire.</p>
+                    <p>My task was to build a Clay-powered engine that didn't just find companies — it identified the ones in that exact window, in real time, and routed them into a pitch that matched their specific situation.</p>
                 </div>
             </div>
         </section>
 
-        <!-- The System -->
+        <!-- System: Dark Section -->
         <section class="cs-section cs-section--dark">
             <div class="container">
-                <div class="cs-section-label cs-section-label--light">02 — The System</div>
-                <h2 class="cs-section-title cs-section-title--light">A real-time trigger engine built on hiring data</h2>
-                <div class="cs-system-grid">
-                    <div class="cs-system-card">
-                        <div class="cs-system-num">01</div>
-                        <h3>Signal Detection</h3>
-                        <p>Clay tables are configured to pull real-time job postings from LinkedIn, Indeed, and company career pages. Filters are set to surface specific roles that indicate a nearshoring window (e.g., "Sales Development Rep" or "Data Entry Analyst" postings in high-cost markets).</p>
+                <div class="cs-section-label cs-section-label--light">The System — 3 Layers</div>
+                <h2 class="cs-section-title cs-section-title--light">I don't find company names.<br>I map their technical DNA and hiring friction.</h2>
+
+                <!-- Step 1 -->
+                <div class="cs-step">
+                    <div class="cs-step-header">
+                        <span class="cs-step-num">01</span>
+                        <h3 class="cs-step-title">Score The Signals</h3>
                     </div>
-                    <div class="cs-system-card">
-                        <div class="cs-system-num">02</div>
-                        <h3>Enrichment & Scoring</h3>
-                        <p>Each triggering company is enriched via Claygent and third-party data providers. Fields pulled: headcount growth velocity, tech stack, decision-maker contact, and open role count. A compound score determines outreach priority.</p>
-                    </div>
-                    <div class="cs-system-card">
-                        <div class="cs-system-num">03</div>
-                        <h3>Personalised Sequencing</h3>
-                        <p>High-scoring leads push directly into Smartlead with dynamically generated first lines that reference the specific role they are hiring for and the cost delta of nearshoring that role. No generic copy. Every email is contextually relevant.</p>
-                    </div>
-                    <div class="cs-system-card">
-                        <div class="cs-system-num">04</div>
-                        <h3>CRM Sync & Routing</h3>
-                        <p>Replies and positive signals are automatically routed to the CRM with enriched data attached — no manual copy-paste. SDRs receive a pre-warmed lead with full context instead of a raw contact.</p>
+                    <div class="cs-step-body">
+                        <p>Every company in the workflow is scored against a compound set of intent indicators. I don't use a single trigger — a company has to clear multiple thresholds before it enters the pipeline.</p>
+                        <div class="cs-signal-grid">
+                            <div class="cs-signal-card">
+                                <span class="cs-signal-icon">⚡</span>
+                                <strong>Live Hiring Activity</strong>
+                                <p>Software Engineer and Software Developer roles as the primary intent trigger. If they're actively posting, they're actively failing to fill.</p>
+                            </div>
+                            <div class="cs-signal-card">
+                                <span class="cs-signal-icon">📈</span>
+                                <strong>Velocity Flags</strong>
+                                <p>How many engineering roles are open simultaneously. A company hiring 5+ devs in the same stack isn't growing — they're hitting a recruitment bottleneck that nearshoring solves.</p>
+                            </div>
+                            <div class="cs-signal-card">
+                                <span class="cs-signal-icon">💰</span>
+                                <strong>Funding Momentum</strong>
+                                <p>Checks if the company raised capital in the last 12 months. Fresh funding means fresh headcount budget — and pressure to deploy it fast.</p>
+                            </div>
+                            <div class="cs-signal-card">
+                                <span class="cs-signal-icon">🧬</span>
+                                <strong>Tech Stack Keywords</strong>
+                                <p>Detecting specific environments: React, Node, .NET, Java, Python, AWS. Stack match determines which nearshoring team is the right fit.</p>
+                            </div>
+                        </div>
+                        <div class="cs-insight-box">
+                            <p>If a company is funded <em>and</em> hiring 5+ devs in a specific stack, they aren't just "growing" — they are hit with a recruitment bottleneck that nearshoring solves.</p>
+                        </div>
                     </div>
                 </div>
+
+                <!-- Step 2 -->
+                <div class="cs-step">
+                    <div class="cs-step-header">
+                        <span class="cs-step-num">02</span>
+                        <h3 class="cs-step-title">Map The "Offshore DNA"</h3>
+                    </div>
+                    <div class="cs-step-body">
+                        <p>People say "target the market." I map the <strong style="color: var(--accent-gold)">readiness</strong>. Finding a tech company is easy. Finding one already comfortable with remote, global talent — that's a different discipline.</p>
+                        <p>The system scans for existing distributed team patterns across three key regions:</p>
+                        <div class="cs-region-list">
+                            <div class="cs-region-item">Latin America (LATAM)</div>
+                            <div class="cs-region-item">Southeast Asia (SEA)</div>
+                            <div class="cs-region-item">Eastern Europe</div>
+                        </div>
+                        <p style="margin-top: 28px;">Companies with existing offshore headcount have already cleared the biggest psychological hurdle — trust in remote talent. They're exponentially easier to close.</p>
+                        <div class="cs-purge-box">
+                            <div class="cs-purge-label">Global Purge</div>
+                            <p>The system automatically excludes staffing firms, recruiting agencies, dev shops, and consulting firms. The goal is 100% ICP purity — high-intent companies, not industry noise.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="cs-step">
+                    <div class="cs-step-header">
+                        <span class="cs-step-num">03</span>
+                        <h3 class="cs-step-title">Build Systems That Turn Data Into Adaptive Outbound</h3>
+                    </div>
+                    <div class="cs-step-body">
+                        <p>If your email is static, you're an operator. If your email <strong style="color: var(--accent-gold)">adapts</strong>, you're a GTM Engineer.</p>
+                        <p>I designed conditional logic that changes the pitch based on each company's specific hiring situation. Three scenarios. Three distinct narratives.</p>
+                        <div class="cs-scenario-grid">
+                            <div class="cs-scenario">
+                                <div class="cs-scenario-label">Scenario A</div>
+                                <div class="cs-scenario-condition">High hiring volume + Recent funding</div>
+                                <div class="cs-scenario-pitch">Speed to market pitch</div>
+                                <p>You raised. You need engineers yesterday. Here's how to deploy 5 devs in 30 days.</p>
+                            </div>
+                            <div class="cs-scenario">
+                                <div class="cs-scenario-label">Scenario B</div>
+                                <div class="cs-scenario-condition">Existing offshore headcount + Specific tech stack</div>
+                                <div class="cs-scenario-pitch">Scale and compatibility pitch</div>
+                                <p>You already work with remote teams. Here's a compatible, stack-specific team that plugs in without friction.</p>
+                            </div>
+                            <div class="cs-scenario">
+                                <div class="cs-scenario-label">Scenario C</div>
+                                <div class="cs-scenario-condition">First-time offshore + New funding</div>
+                                <div class="cs-scenario-pitch">Risk mitigation and talent density pitch</div>
+                                <p>You've never done this. Here's how to do it with zero risk, full oversight, and the right talent density from day one.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </section>
 
-        <!-- The Stack -->
+        <!-- Output Section -->
         <section class="cs-section container">
-            <div class="cs-section-label">03 — The Stack</div>
-            <h2 class="cs-section-title">Tools & Technologies</h2>
-            <div class="cs-stack-grid">
-                <div class="cs-stack-item">
-                    <span class="cs-stack-name">Clay</span>
-                    <span class="cs-stack-role">Signal detection, enrichment & orchestration</span>
-                </div>
-                <div class="cs-stack-item">
-                    <span class="cs-stack-name">Smartlead</span>
-                    <span class="cs-stack-role">Multi-channel outbound sequencing</span>
-                </div>
-                <div class="cs-stack-item">
-                    <span class="cs-stack-name">Claygent (AI)</span>
-                    <span class="cs-stack-role">Autonomous company research & enrichment</span>
-                </div>
-                <div class="cs-stack-item">
-                    <span class="cs-stack-name">LinkedIn / Job APIs</span>
-                    <span class="cs-stack-role">Real-time hiring signal source</span>
-                </div>
-                <div class="cs-stack-item">
-                    <span class="cs-stack-name">CRM (HubSpot)</span>
-                    <span class="cs-stack-role">Lead routing & pipeline management</span>
-                </div>
-                <div class="cs-stack-item">
-                    <span class="cs-stack-name">n8n / Webhooks</span>
-                    <span class="cs-stack-role">Automation glue & trigger orchestration</span>
+            <div class="cs-section-label">The Output</div>
+            <div class="cs-two-col">
+                <h2 class="cs-section-title">A sales-ready engine that identifies, enriches, and routes — automatically.</h2>
+                <div class="cs-section-body">
+                    <p>The end state of this workflow is a fully enriched lead record for the <strong>Technical Core</strong> — the CTO, VP Engineering, or Head of Engineering — with verified LinkedIn profile and email, routed directly into a dynamic outreach sequence.</p>
+                    <p>No SDR manually researching job boards. No guessing on pitch angle. The system already knows the company's situation and has selected the right narrative before a single person opens the email draft.</p>
+                    <div class="cs-output-stack">
+                        <div class="cs-output-item">
+                            <span class="cs-output-dot"></span>
+                            Clay — signal detection, enrichment, conditional logic
+                        </div>
+                        <div class="cs-output-item">
+                            <span class="cs-output-dot"></span>
+                            Smartlead — dynamic sequence delivery
+                        </div>
+                        <div class="cs-output-item">
+                            <span class="cs-output-dot"></span>
+                            Claygent — LinkedIn + email verification
+                        </div>
+                        <div class="cs-output-item">
+                            <span class="cs-output-dot"></span>
+                            AI Enrichment — tech stack detection, offshore DNA mapping
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- The Outcome -->
+        <!-- Closing Statement -->
         <section class="cs-section cs-section--cream">
-            <div class="container">
-                <div class="cs-section-label">04 — The Outcome</div>
-                <div class="cs-two-col">
-                    <h2 class="cs-section-title">Measurable results, not vanity metrics</h2>
-                    <div class="cs-section-body">
-                        <p>By switching from list-based cold outreach to intent-triggered precision targeting, the client saw a significant improvement in reply rates and qualified meeting bookings. More importantly, the system reduced the time SDRs spent on manual research by roughly 70%, allowing them to focus on conversations rather than data work.</p>
-                        <p>The nearshoring pitch landed harder because it was delivered at exactly the right moment — when the company was already feeling the cost of filling those roles locally. Timing, as it turns out, is the most important form of personalisation.</p>
-                        <blockquote class="cs-quote">
-                            "The difference between a cold email and the right email at the right time is the entire gap between a 1% and a 12% reply rate."
-                        </blockquote>
+            <div class="container cs-closing">
+                <h2 class="cs-closing-headline">The GTM Engine becomes a system that predicts<br>who will buy before the first email is even sent.</h2>
+                <div class="cs-closing-body">
+                    <p>This is why I say GTM Engineering is revenue engineering. If all you can do is "run outbound in Clay," you're an operator. A GTME understands revenue patterns, hiring friction, adaptive logic, and automation architecture — and knows how to turn raw signals into systems that print revenue.</p>
+                    <div class="cs-capability-list">
+                        <span>Revenue patterns</span>
+                        <span>Hiring friction</span>
+                        <span>Adaptive logic</span>
+                        <span>Automation architecture</span>
+                        <span>Signal → System → Revenue</span>
                     </div>
                 </div>
+                <blockquote class="cs-quote cs-quote--large">
+                    "The difference between running a campaign and engineering the entire revenue machine."
+                </blockquote>
             </div>
         </section>
 
