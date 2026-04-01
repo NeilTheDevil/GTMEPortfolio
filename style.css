@@ -604,9 +604,10 @@ body {
     }
 
     .editorial-headline {
-        font-size: clamp(1.8rem, 8vw, 2.5rem); /* Fluid, no single-word breaks */
+        font-size: clamp(1.6rem, 8vw, 2.2rem); /* Slightly smaller for 390px safety */
         line-height: 1.1;
         letter-spacing: -0.04em;
+        overflow-wrap: break-word;
     }
 
     .hero-image {
@@ -629,20 +630,22 @@ body {
     }
 
     .intro-text {
-        font-size: 1.1rem;
+        font-size: 1rem;
         line-height: 1.4;
+        overflow-wrap: break-word;
     }
 
     .section-label {
-        font-size: 0.85rem;
+        font-size: 0.8rem;
         margin-bottom: 25px;
         text-align: center;
     }
 
     .section-intro {
-        font-size: 1rem;
+        font-size: 0.95rem;
         margin-bottom: 30px;
         text-align: center;
+        overflow-wrap: break-word;
     }
 
     .loom-grid, .automation-highlights, .workflow-visuals {
@@ -650,12 +653,24 @@ body {
         gap: 20px;
     }
 
+    .highlight-box h3 {
+        font-size: 1.3rem; /* Scaled down for zero clipping */
+        line-height: 1.2;
+        margin-bottom: 15px;
+        overflow-wrap: break-word;
+    }
+
+    .highlight-box p {
+        font-size: 0.95rem;
+        overflow-wrap: break-word;
+    }
+
     .massive-stat {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
     }
 
     .stats-hero p {
-        font-size: 0.9rem;
+        font-size: 0.85rem;
         text-align: center;
     }
 
@@ -679,7 +694,8 @@ body {
     }
 
     .project-title h2 {
-        font-size: clamp(1.4rem, 6vw, 1.8rem);
+        font-size: clamp(1.2rem, 6vw, 1.5rem); /* Scaled down for narrow screens */
+        overflow-wrap: break-word;
     }
 
     .community-engagement-section {
