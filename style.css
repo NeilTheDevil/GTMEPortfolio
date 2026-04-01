@@ -565,7 +565,7 @@ body {
 
 @media (max-width: 768px) {
     .container {
-        padding: 0 50px; /* Increased padding to push text away from the left edge */
+        padding: 0 60px; /* Maximum breathing room */
         box-sizing: border-box;
     }
 
@@ -574,7 +574,7 @@ body {
     }
 
     .nav-content {
-        justify-content: flex-start;
+        justify-content: flex-start; /* Keep logo on left as requested */
     }
 
     .nav-links {
@@ -587,14 +587,14 @@ body {
 
     .hero-header {
         flex-direction: column;
-        align-items: flex-start;
-        text-align: left;
+        align-items: center; /* Center to avoid edge-clumping */
+        text-align: center;
         gap: 30px;
     }
 
     .editorial-headline {
-        font-size: 1.85rem; /* Reduced to ensure zero edge-clipping */
-        line-height: 1.2;
+        font-size: 1.7rem; /* Perfectly scaled for 60px margins */
+        line-height: 1.25;
         letter-spacing: -0.04em;
         word-wrap: break-word;
         max-width: 100%;
@@ -610,21 +610,24 @@ body {
 
     .hero-intro {
         margin-top: 30px;
+        text-align: center;
     }
 
     .intro-text {
-        font-size: 1.1rem;
-        line-height: 1.5;
+        font-size: 1.05rem;
+        line-height: 1.6;
     }
 
     .section-label {
-        font-size: 0.95rem;
+        font-size: 0.9rem;
         margin-bottom: 30px;
+        text-align: center; /* Balanced feel */
     }
 
     .section-intro {
-        font-size: 1.1rem;
+        font-size: 1.05rem;
         margin-bottom: 40px;
+        text-align: center;
     }
 
     .loom-grid {
@@ -633,11 +636,12 @@ body {
     }
 
     .massive-stat {
-        font-size: 3rem;
+        font-size: 2.8rem;
     }
 
     .stats-hero p {
-        font-size: 1rem;
+        font-size: 0.95rem;
+        text-align: center;
     }
 
     .tool-grid {
@@ -671,12 +675,13 @@ body {
     }
 
     .work-section {
-        padding: 100px 0 60px; /* More vertical air for the transition */
+        padding: 120px 0 60px; /* Even more vertical air */
     }
 
     .project-header {
         grid-template-columns: 1fr;
         padding: 60px 0;
+        text-align: left; /* Keep case studies left-aligned for hierarchy */
     }
 
     .project-title h2 {
@@ -694,12 +699,12 @@ body {
 
     .about-flex {
         flex-direction: column;
-        text-align: left;
+        text-align: center; /* Balanced feel */
         gap: 40px;
     }
 
     .about-text-content h2 {
-        font-size: 1.8rem;
+        font-size: 1.7rem;
     }
 
     .about-portrait-secondary {
@@ -708,7 +713,8 @@ body {
     }
 
     .final-cta {
-        padding: 60px 0;
+        padding: 80px 0;
+        text-align: center;
     }
 
     .cta-inner h2 {
@@ -725,10 +731,10 @@ body {
     .footer-bottom-new {
         flex-direction: column;
         gap: 20px;
-        text-align: left;
+        text-align: center;
     }
 
     .socials {
-        justify-content: flex-start;
+        justify-content: center;
     }
 }
