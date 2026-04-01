@@ -560,25 +560,61 @@ body {
 }
 
 @media (max-width: 768px) {
+    .container {
+        padding: 0 25px;
+    }
+
+    .nav {
+        padding: 20px 0;
+    }
+
     .nav-links {
         display: none;
     }
 
-    .hero-container {
+    .hero {
+        padding: 60px 0 80px;
+    }
+
+    .hero-header {
         flex-direction: column;
-        padding-top: 100px;
+        align-items: center;
         text-align: center;
-        gap: 30px;
+        gap: 40px;
     }
 
-    .hero-content h1 {
-        font-size: 2.8rem;
+    .editorial-headline {
+        font-size: 3.2rem;
+        line-height: 1.1;
+        letter-spacing: -0.04em;
     }
 
-    .hero-portrait {
+    .hero-image {
         width: 100%;
-        max-width: 400px;
-        transform: none;
+        max-width: 320px;
+        order: -1; /* Image above text on mobile */
+    }
+
+    .hero-intro {
+        margin-top: 40px;
+        text-align: center;
+    }
+
+    .intro-text {
+        font-size: 1.35rem;
+    }
+
+    .loom-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .stats-hero {
+        margin: 40px 0;
+    }
+
+    .massive-stat {
+        font-size: 5rem;
     }
 
     .community-gallery {
@@ -590,16 +626,27 @@ body {
         grid-row: span 1;
     }
 
-    .about-grid {
-        grid-template-columns: 1fr;
+    .about-flex {
+        flex-direction: column;
+        text-align: center;
+        gap: 60px;
+    }
+
+    .about-text-content h2 {
+        font-size: 2.5rem;
     }
 
     .about-portrait-secondary {
-        height: 50vh;
+        width: 100%;
+        height: 400px;
     }
 
-    .cta-content h2 {
-        font-size: 2.2rem;
+    .final-cta {
+        padding: 80px 0;
+    }
+
+    .cta-inner h2 {
+        font-size: 2rem;
     }
 
     .footer-bottom-new {
