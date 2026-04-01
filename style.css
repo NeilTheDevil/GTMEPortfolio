@@ -565,11 +565,12 @@ body {
 
 @media (max-width: 768px) {
     .container {
-        padding: 0 40px; /* High-end spaciousness */
+        padding: 0 35px; /* Stable, breathable margins */
+        box-sizing: border-box;
     }
 
     .nav {
-        padding: 60px 0 20px; /* Move logo away from top edge */
+        padding: 60px 0 20px;
     }
 
     .nav-content {
@@ -592,9 +593,11 @@ body {
     }
 
     .editorial-headline {
-        font-size: 2.25rem; /* Scaled for mobile breathing room */
-        line-height: 1.15;
+        font-size: 1.85rem; /* Reduced to ensure zero edge-clipping */
+        line-height: 1.2;
         letter-spacing: -0.04em;
+        word-wrap: break-word;
+        max-width: 100%;
     }
 
     .hero-image {
@@ -610,17 +613,17 @@ body {
     }
 
     .intro-text {
-        font-size: 1.15rem;
-        line-height: 1.4;
+        font-size: 1.1rem;
+        line-height: 1.5;
     }
 
     .section-label {
-        font-size: 1rem;
+        font-size: 0.95rem;
         margin-bottom: 30px;
     }
 
     .section-intro {
-        font-size: 1.15rem;
+        font-size: 1.1rem;
         margin-bottom: 40px;
     }
 
@@ -630,11 +633,11 @@ body {
     }
 
     .massive-stat {
-        font-size: 3.25rem; /* Prevent stat overflow */
+        font-size: 3rem;
     }
 
     .stats-hero p {
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
 
     .tool-grid {
@@ -644,7 +647,7 @@ body {
 
     .tool-grid span {
         padding: 15px;
-        font-size: 0.85rem;
+        font-size: 0.8rem;
     }
 
     .automation-highlights {
@@ -673,7 +676,7 @@ body {
     }
 
     .project-title h2 {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
     }
 
     .community-gallery {
@@ -692,7 +695,7 @@ body {
     }
 
     .about-text-content h2 {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 
     .about-portrait-secondary {
@@ -705,14 +708,14 @@ body {
     }
 
     .cta-inner h2 {
-        font-size: 1.6rem;
+        font-size: 1.5rem;
     }
 
     .btn-cta {
         width: 100%;
         text-align: center;
         padding: 18px 0;
-        font-size: 1rem;
+        font-size: 0.95rem;
     }
 
     .footer-bottom-new {
