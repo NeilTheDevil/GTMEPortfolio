@@ -88,6 +88,78 @@ body {
     color: var(--text-primary);
 }
 
+/* --- Mobile Menu Overlay --- */
+.mobile-menu-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: var(--accent);
+    z-index: 2000;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.mobile-menu-overlay.active {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.close-menu {
+    position: absolute;
+    top: 30px;
+    right: 24px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: rgba(255,255,255,0.6);
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.close-menu:hover {
+    color: #fff;
+}
+
+.mobile-nav-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    padding: 0;
+}
+
+.mobile-nav-links a {
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    color: #fff;
+    transition: color 0.2s ease;
+}
+
+.mobile-nav-links a:hover {
+    color: var(--accent-gold);
+}
+
+.btn-cta-mobile {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 14px 36px;
+    background: var(--accent-gold);
+    color: #fff !important;
+    border-radius: 100px;
+    font-size: 1rem !important;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+}
+
 /* --- Hero --- */
 .hero {
     padding: 80px 0 100px;
@@ -597,6 +669,10 @@ body {
 
     .mobile-menu-toggle {
         display: block;
+        cursor: pointer;
+        font-size: 0.8rem;
+        font-weight: 700;
+        letter-spacing: 0.1em;
     }
 
     .hero {
@@ -736,8 +812,13 @@ body {
     }
 
     .project-header {
-        padding: 40px 0;
+        padding: 40px 0; /* Consistent top spacing for all case studies */
         text-align: center;
+        border-top: 1px solid var(--border);
+    }
+
+    .index {
+        display: none; /* Remove stray numerical indexing */
     }
 
     .project-title h2 {
