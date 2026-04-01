@@ -567,7 +567,7 @@ body {
 
 @media (max-width: 768px) {
     .container {
-        padding: 0 40px; /* Precise 390px-friendly buffer */
+        padding: 0 24px; /* Updated: 24px global side padding */
         box-sizing: border-box;
     }
 
@@ -579,11 +579,14 @@ body {
         backdrop-filter: blur(10px);
         border-bottom: 1px solid rgba(0, 12, 36, 0.08); /* Crisp divider */
         z-index: 1000;
+        width: 100%;
+        max-width: 100%;
     }
 
     .nav-content {
         justify-content: space-between;
         align-items: center;
+        padding: 0 20px; /* Logo/Menu pushed in by 20px */
     }
 
     .nav-links {
@@ -603,15 +606,17 @@ body {
         align-items: center;
         text-align: center;
         gap: 25px;
+        width: 100%;
     }
 
     .editorial-headline {
-        font-size: clamp(1.6rem, 8vw, 2.2rem); /* Slightly smaller for 390px safety */
+        font-size: clamp(1.6rem, 8vw, 2.2rem); 
         line-height: 1.1;
         letter-spacing: -0.04em;
         overflow-wrap: break-word;
         word-wrap: break-word;
-        max-width: 100%;
+        max-width: 90%; /* Columnar look for headers */
+        margin: 0 auto;
     }
 
     .hero-image {
@@ -645,8 +650,10 @@ body {
 
     .intro-text {
         font-size: 1rem;
-        line-height: 1.4;
+        line-height: 1.6; /* Increased for legibility */
         overflow-wrap: break-word;
+        max-width: 90%;
+        margin: 0 auto;
     }
 
     .section-label {
@@ -660,6 +667,9 @@ body {
         margin-bottom: 30px;
         text-align: center;
         overflow-wrap: break-word;
+        line-height: 1.6;
+        max-width: 90%;
+        margin: 0 auto;
     }
 
     .loom-grid, .automation-highlights, .workflow-visuals {
@@ -670,16 +680,21 @@ body {
     }
 
     .highlight-box h3, .workflow-inner-desc h3 {
-        font-size: 1.3rem; /* Scaled down for zero clipping */
+        font-size: 1.3rem; 
         line-height: 1.2;
         margin-bottom: 15px;
         overflow-wrap: break-word;
         word-wrap: break-word;
+        max-width: 90%;
+        margin: 0 auto 15px;
     }
 
     .highlight-box p, .workflow-inner-desc p {
         font-size: 0.95rem;
         overflow-wrap: break-word;
+        line-height: 1.6;
+        max-width: 90%;
+        margin: 0 auto;
     }
 
     .massive-stat {
@@ -689,6 +704,7 @@ body {
     .stats-hero p {
         font-size: 0.85rem;
         text-align: center;
+        line-height: 1.6;
     }
 
     .tool-grid {
@@ -697,8 +713,15 @@ body {
     }
 
     .tool-grid span {
-        padding: 15px;
+        padding: 15px 8px; /* Extra horizontal padding for air */
         font-size: 0.8rem;
+        line-height: 1.2; /* Tight as requested */
+    }
+
+    .tool-tag {
+        display: inline-block;
+        padding: 5px 8px; /* Consistent 8px padding */
+        margin-bottom: 12px;
     }
 
     .work-section {
@@ -711,8 +734,16 @@ body {
     }
 
     .project-title h2 {
-        font-size: clamp(1.2rem, 6vw, 1.5rem); /* Scaled down for narrow screens */
+        font-size: clamp(1.2rem, 6vw, 1.5rem); 
         overflow-wrap: break-word;
+        max-width: 90%;
+        margin: 0 auto 15px;
+    }
+
+    .project-details p {
+        line-height: 1.6;
+        max-width: 90%;
+        margin: 0 auto 10px;
     }
 
     .community-engagement-section {
@@ -725,6 +756,12 @@ body {
         gap: 30px;
     }
 
+    .about-text-content p {
+        line-height: 1.6;
+        max-width: 90%;
+        margin: 0 auto 20px;
+    }
+
     .final-cta {
         padding: 50px 0;
         text-align: center;
@@ -732,6 +769,8 @@ body {
 
     .cta-inner h2 {
         font-size: 1.4rem;
+        max-width: 90%;
+        margin: 0 auto 30px;
     }
 
     .footer-bottom-new {
