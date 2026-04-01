@@ -660,8 +660,13 @@ body {
     }
 
     .section-label {
-        font-size: 0.8rem;
-        margin-bottom: 25px;
+        font-size: 1.1rem; /* 18px as requested */
+        font-weight: 800; /* Bold/Black */
+        letter-spacing: 0.15em; /* Expansive modern look */
+        text-transform: uppercase;
+        color: var(--accent); /* High contrast primary dark */
+        margin-top: 60px; /* Signaling a new chapter */
+        margin-bottom: 24px;
         text-align: center;
     }
 
