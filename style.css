@@ -343,9 +343,25 @@ body {
 .stats-hero p {
     font-size: 1.5rem;
     color: var(--accent-gold);
-    margin-bottom: 60px;
+    margin-bottom: 40px; /* Reduced from 60px to accommodate the image */
     font-weight: 600;
 }
+
+.campaign-proof {
+    max-width: 900px;
+    margin: 0 auto 60px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.campaign-screenshot {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
 
 .tool-grid {
     display: grid;
